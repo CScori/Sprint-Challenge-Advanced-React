@@ -6,7 +6,8 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      players: []
+      players: [],
+      searches: []
     }
   }
 
@@ -23,13 +24,14 @@ class App extends React.Component {
   }
 
 
+ 
   render() {
     return (
       <div className="user">
       {this.state.players.map(player => (
        <div key={player.id}> 
-         <h2>{player.name}</h2>
-        <h3>{player.country}</h3>
+         <h2>I am : {player.name}</h2>
+        <h3>From: {player.country}</h3>
         <p>{player.searches}</p>
        </div>
       ))}
