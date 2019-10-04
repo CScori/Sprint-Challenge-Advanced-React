@@ -1,14 +1,18 @@
 import React from 'react'
-import styled from 'styled-components'
 
 
 
-const players = (props) => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
 
-export default players
+class Players extends React.Component {
+
+    render(props) {
+        return (
+            <div>
+                <h3>{props.name}</h3>
+                <div>{props.country}</div>
+            </div>
+        )
+    }
+};
+
+export default Players
