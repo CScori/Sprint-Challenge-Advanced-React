@@ -1,9 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from './App';
+import Players from './components/Players'
+import { render, fireEvent } from '@testing-library/react';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+test('renders without crashing', () => {
+  render(<App />);
+});
+
+test('renders dark mode options', () => {
+  render(<Players />);
+});
+
+test('Named class: player, shows player data', () => {
+  const { getByText } = render(<App />);
+
+  // assert that the "lions" header is on the DOM
+  getByText(/player/i);
 });

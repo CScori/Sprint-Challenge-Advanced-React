@@ -27,14 +27,18 @@ class App extends React.Component {
  
   render() {
     return (
-      <div className="user">
+      <div className="player">Player
       {this.state.players.map(player => (
        <div key={player.id}> 
          <h2>I am : {player.name}</h2>
         <h3>From: {player.country}</h3>
-        <p>{player.searches}</p>
+        <p>searched {player.searches}</p>
        </div>
       ))}
+
+      <div className="colorChange">
+        <Players />
+      </div>
       </div>
       
         
